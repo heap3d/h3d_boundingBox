@@ -15,10 +15,6 @@ import modo.constants as c
 
 scene = modo.scene.current()
 
-# lx.eval('user.defNew h3d_bb_del_src boolean momentary')
-# lx.eval('user.def h3d_bb_del_src dialogname "Select to delete source mesh"')
-# lx.eval('user.def h3d_bb_del_src username "Delete source mesh"')
-# lx.eval('user.value h3d_bb_del_src')
 bool_delete_source = lx.eval('user.value h3d_bb_del_src ?')
 bb_mesh_list = list()
 
