@@ -49,11 +49,11 @@ def create_bounding_box(items_list=None):
     for current_item in items_list:
         if current_item.isAnInstance:
             instance_source = get_source_of_instance(current_item)
-            corners = instance_source.geometry.boundingBox
+            corners = instance_source.geometry.boundingBox  # type: ignore
         else:
             corners = current_item.geometry.boundingBox
         current_item.select(replace=True)
-        item_name = strip_name(name=lx.eval('item.name ?'), replace=False)
+        item_name = strip_name(name=lx.eval('item.name ?'), replace=False)  # type: ignore
         scene.deselect()
         lx.eval('layer.new')
         lx.eval('item.name "{}"'.format(item_name + '_BoundingBox'))
